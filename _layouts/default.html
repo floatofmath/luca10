@@ -54,9 +54,9 @@
                                   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
                                   // Display the result in the element with id="demo"
-                                  document.getElementById("demo").innerHTML = days + "d " +
-                                      hours + "h "
-                                      + minutes + "m " + seconds + "s ";
+                                  document.getElementById("demo").innerHTML = days + "Tage " +
+                                      hours + "Stunden "
+                                      + minutes + "Minuten " + seconds + "Sekunden ";
 
                                   // If the count down is finished, write some text
                                   if (distance < 0) {
@@ -91,7 +91,6 @@
               <span class="right-tail"></span>
             </span>
           </header>
-          <p id="demo"></p>
 
           {% if site.show_downloads %}
           <section id="downloads">
@@ -115,34 +114,35 @@
 
           <section id="main_content">
             {{ content }}
+            <h2><p id="demo"></p></h2>
           </section>
 
           <footer>
-            <span class="ribbon-outer">
-              <span class="ribbon-inner">
-                {% if site.github.is_project_page %}
-                              <p>this project by <a href="{{
-                              site.github.owner_url }}">{{
-                              site.github.owner_name }}</a> can be
-                              found on <a href="{{
-                              site.github.repository_url
-                              }}">GitHub</a></p>
-                              {% endif %}
-                                          {% if
-                              site.github.is_user_page %}
-                                            <p>Projects by <a href="{{
-                                            site.github.owner_url
-                                            }}">{{
-                                            site.github.owner_name
-                                            }}</a> can be found on
-                                            <a href="{{
-                                            site.github.repository_url
-                                            }}">GitHub</a></p>
-                                            {% endif %}
-              </span>
-              <span class="left-tail"></span>
-              <span class="right-tail"></span>
-            </span>
+            <!-- <span class="ribbon-outer"> -->
+            <!--   <span class="ribbon-inner"> -->
+            <!--     {% if site.github.is_project_page %} -->
+            <!--     <p>this project by <a href="{{ -->
+            <!--                                 site.github.owner_url }}">{{ -->
+            <!--         site.github.owner_name }}</a> can be -->
+            <!--       found on <a href="{{ -->
+            <!--                         site.github.repository_url -->
+            <!--                         }}">GitHub</a></p> -->
+            <!--     {% endif %} -->
+            <!--     {% if -->
+            <!--     site.github.is_user_page %} -->
+            <!--     <p>Projects by <a href="{{ -->
+            <!--                             site.github.owner_url -->
+            <!--                             }}">{{ -->
+            <!--         site.github.owner_name -->
+            <!--         }}</a> can be found on -->
+            <!--       <a href="{{ -->
+            <!--                site.github.repository_url -->
+            <!--                }}">GitHub</a></p> -->
+            <!--     {% endif %} -->
+            <!--   </span> -->
+            <!--   <span class="left-tail"></span> -->
+            <!--   <span class="right-tail"></span> -->
+            <!-- </span> -->
                     <p>Generated
                     with <a href="https://pages.github.com">GitHub
                         Pages</a> using Merlot</p>
